@@ -18,7 +18,7 @@ payment = Payment(app, wallet)
 
 def cat(filepath):
     with open(filepath, 'r') as file:
-        return file.readline()
+        return file.read()
 
 
 def spin_the_cylinder():

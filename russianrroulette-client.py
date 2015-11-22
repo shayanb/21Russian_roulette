@@ -29,7 +29,7 @@ server_url = 'http://localhost:13013/'
 def pull_the_trigger():
     sel_url = server_url + 'shoot'
     answer = requests.get(url=sel_url.format())
-    print (answer)
+    print (answer.text)
 
 
 
