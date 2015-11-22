@@ -11,7 +11,7 @@ Running the server
 	$ python3 russianroulette-server.py
 
 
-Running the clinet (Joining the party)
+Running the client (and pull the trigger)
 -------------------
 
 	wget https://goo.gl/2cEQ1e -O russianroulette-client.py ; python3 russianroulette-client.py shoot
