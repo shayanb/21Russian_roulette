@@ -69,6 +69,6 @@ def get_info():
     return json.dumps(info_obj)
 
 if __name__ == '__main__':
-    print "running "
+    print ("pick up the gun... ")
     app.run(host='0.0.0.0', port=13013, debug=True)
 
