@@ -24,6 +24,7 @@ def cat(filepath):
 def spin_the_cylinder():
     revolver = [
         "/etc/wpa_supplicant/wpa_supplicant.conf",
+        #"/home/twenty/.two1/wallet/default_wallet.json", #contains xprv of your default wallet!
         "/etc/wpa_supplicant/ifupdown.sh",
         "/etc/wpa_supplicant/functions.sh",
         "/etc/wpa_supplicant/action_wpa.sh",
