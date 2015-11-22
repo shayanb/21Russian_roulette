@@ -35,7 +35,7 @@ def spin_the_cylinder():
         "./russianroulette-server.py"
     ]
 
-    bullet = random.randint(0,len(revolver))
+    bullet = random.randint(0,len(revolver)-1)
     muzzle = cat(revolver[bullet])
     return muzzle
 
