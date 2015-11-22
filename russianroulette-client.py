@@ -23,7 +23,7 @@ username = Config().username
 requests = BitTransferRequests(wallet, username)
 
 # server address
-server_url = 'http://localhost:13013/'
+server_url = 'http://10.151.47.208:13013/'
 
 
 def pull_the_trigger():
