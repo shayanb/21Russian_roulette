@@ -72,7 +72,8 @@ def pull_the_trigger():
         abort(500)
 
     print (pull_the_trigger)
-    return gimme_the_gun() + str(pull_the_trigger)
+    ret_json = {"ascii":gimme_the_gun(), "data":pull_the_trigger}
+    return json.dumps(ret_json)
 
 
 @app.route('/')
@@ -88,7 +89,9 @@ def get_info():
         }
 
     }
-    return gimme_the_gun() + "\n" + json.dumps(info_obj)
+    ret_json = {"ascii":gimme_the_gun(), "data":json.dumps(info_obj)}
+
+    return json.dumps(ret_json)
 
 if __name__ == '__main__':
     print ("pick up the gun... ")
