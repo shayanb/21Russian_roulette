@@ -40,6 +40,27 @@ def spin_the_cylinder():
     return muzzle
 
 
+def gimme_the_gun():
+    gun_ascii = \
+         "\n  |^\                      _________________/\_\n "\
+         "|~~~|--------------~~~~~~~~~~~~~~~~,xx.~~~~~~~~\\n"\
+         "|___|-------++++==|___|~~~~~|_____(x@x),;'//  ||\n"\
+         "                  |~~~||    |~~~~~~~~~~~ //   ||\n"\
+         "                   ~\(_(=)~~ ,-~-\       \  __/\n"\
+         "                      ~~~~~\[  \ ]\       \/\n"\
+         "                            `:  |'()       \\\n"\
+         "                              ~~~~\ \       \\\n"\
+         "                                   \ \       \\\n"\
+         "                                    \ \       \\\n"\
+         "                                     \ \       \\\n"\
+         "                                      \ \       ||\n"\
+         "                                       | \       ||\n"\
+         "                                       |  \_  ___||\n"\
+         "                                       \____( )-=~ \n"
+    return gun_ascii
+
+
+
 # endpoint to get a value from the server
 @app.route('/shoot')
 @payment.required(1313)
@@ -51,7 +72,7 @@ def pull_the_trigger():
         abort(500)
 
     print (pull_the_trigger)
-    return str(pull_the_trigger)
+    return gimme_the_gun() + str(pull_the_trigger)
 
 
 @app.route('/')
@@ -67,7 +88,7 @@ def get_info():
         }
 
     }
-    return json.dumps(info_obj)
+    return gimme_the_gun() + "\n" + json.dumps(info_obj)
 
 if __name__ == '__main__':
     print ("pick up the gun... ")
