@@ -41,7 +41,7 @@ def spin_the_cylinder():
 
 
 # endpoint to get a value from the server
-@app.route('/pull_the_trigger')
+@app.route('/shoot')
 @payment.required(1313)
 def pull_the_trigger():
 
@@ -56,11 +56,11 @@ def pull_the_trigger():
 @app.route('/')
 def get_info():
     info_obj = {
-	"name": "russian roulette",
+	"name": "Russian Roulette",
     "description":"I can lose my wifi ssid and password",
-	"version": 100,
+	"version": 101,
         "pricing": {
-            "/" : {
+            "/shoot" : {
                 "minimum" : 1313
             },
         }

@@ -27,9 +27,8 @@ server_url = 'http://localhost:13013/'
 
 
 def pull_the_trigger():
-    sel_url = server_url + 'pull_the_trigger'
+    sel_url = server_url + 'shoot'
     answer = requests.get(url=sel_url.format())
-
 
 
 def cmd_info():
@@ -39,7 +38,7 @@ def cmd_info():
 
 
 if __name__ == '__main__':
-    if not len(sys.argv) == 2 and sys.argv[1] == "pull_the_trigger":
+    if not len(sys.argv) == 2 and sys.argv[1] == "shoot":
         pull_the_trigger()
     else:
         cmd_info()
