@@ -29,8 +29,8 @@ server_url = 'http://localhost:13013/'
 def pull_the_trigger():
     sel_url = server_url + 'shoot'
     answer = requests.get(url=sel_url.format())
-    print (answer.json().get("ascii"))
-    print (json.dumps(json.loads(answer.json().get("data", None)), indent=4, sort_keys=True))
+    print (answer.json().get("ascii", None))
+    print (answer.json().get("data", None))
 
 
 

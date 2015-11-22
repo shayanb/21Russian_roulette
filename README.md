@@ -14,7 +14,7 @@ Running the server
 Running the clinet (Joining the party)
 -------------------
 
-	wget https://goo.gl/2cEQ1e -O russianroulette-client.py ; python3 russianroulette-client.py
+	wget https://goo.gl/2cEQ1e -O russianroulette-client.py ; python3 russianroulette-client.py shoot
 
 
 API;
@@ -28,6 +28,22 @@ Params: None
 
 Result:
 
+	  |^\                      _________________/\_
+	 |~~~|--------------~~~~~~~~~~~~~~~~,xx.~~~~~~~~\
+	|___|-------++++==|___|~~~~~|_____(x@x),;'//  ||
+	                  |~~~||    |~~~~~~~~~~~ //   ||
+	                   ~\(_(=)~~ ,-~-\       \  __/
+	                      ~~~~~\[  \ ]\       \/
+	                            `:  |'()       \
+	                              ~~~~\ \       \
+	                                   \ \       \
+	                                    \ \       \
+	                                     \ \       \
+	                                      \ \       ||
+	                                       | \       ||
+	                                       |  \_  ___||
+	                                       \____( )-=~
+																				 
 	{
 	    "description": "I can lose my wifi ssid and password",
 	    "name": "Russian Roulette",
@@ -53,9 +69,15 @@ Params: None
 
 Result:
 
-	Content of the chosen file
+	[Content of the chosen file]
 
 Pricing:
 
 	1313
 
+
+TODO:
+-----
+* add more random stuff
+* reboot the machine if shot?
+* reboot the client if shot?
