@@ -38,7 +38,7 @@ def cmd_info():
 
 
 if __name__ == '__main__':
-    if not len(sys.argv) == 2 and sys.argv[1] == "shoot":
+    if len(sys.argv) == 2 and sys.argv[1] == "shoot":
         pull_the_trigger()
     else:
         cmd_info()
