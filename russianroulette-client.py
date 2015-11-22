@@ -30,7 +30,7 @@ def pull_the_trigger():
     sel_url = server_url + 'shoot'
     answer = requests.get(url=sel_url.format())
     print (answer.json().get("ascii"))
-    print (answer.text)
+    print (answer.json().get("data"))
 
 
 
