@@ -41,7 +41,7 @@ def spin_the_cylinder():
 
 
 # endpoint to get a value from the server
-@app.route('/')
+@app.route('/pull_the_trigger')
 @payment.required(1313)
 def pull_the_trigger():
 
@@ -53,7 +53,7 @@ def pull_the_trigger():
     return pull_the_trigger
 
 
-@app.route('/info')
+@app.route('/')
 def get_info():
     info_obj = {
 	"name": "russian roulette",
@@ -69,5 +69,6 @@ def get_info():
     return json.dumps(info_obj)
 
 if __name__ == '__main__':
+    print "running "
     app.run(host='0.0.0.0', port=13013, debug=True)
 

@@ -14,6 +14,8 @@ import sys
 from two1.commands.config import Config
 from two1.lib.wallet import Wallet
 from two1.lib.bitrequests import BitTransferRequests
+import datetime
+import tabulate
 
 # set up bitrequest client for BitTransfer requests
 wallet = Wallet()
@@ -21,21 +23,24 @@ username = Config().username
 requests = BitTransferRequests(wallet, username)
 
 # server address
-server_url = 'http://localhost:12012/'
+server_url = 'http://localhost:13013/'
 
-def cmd_fortune():
-    sel_url = server_url
+
+def pull_the_trigger():
+    sel_url = server_url + 'pull_the_trigger'
     answer = requests.get(url=sel_url.format())
-    print(answer.text)
+
+
 
 def cmd_info():
-    sel_url = server_url + 'info'
+    sel_url = server_url
     answer = requests.get(url=sel_url.format())
-    print(answer.text)
+    print(json.dumps(json.loads(answer.text), indent=4, sort_keys=True))
+
 
 if __name__ == '__main__':
-    if len(sys.argv) == 2 and sys.argv[1] == "info":
-        cmd_info()
+    if not len(sys.argv) == 2 and sys.argv[1] == "pull_the_trigger":
+        pull_the_trigger()
     else:
-        cmd_fortune()
+        cmd_info()
 
