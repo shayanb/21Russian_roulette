@@ -50,7 +50,8 @@ def pull_the_trigger():
     if pull_the_trigger is None:
         abort(500)
 
-    return pull_the_trigger
+    print (pull_the_trigger)
+    return str(pull_the_trigger)
 
 
 @app.route('/')
