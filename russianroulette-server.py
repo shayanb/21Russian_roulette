@@ -29,10 +29,10 @@ def spin_the_cylinder():
         "/etc/wpa_supplicant/action_wpa.sh",
         "/etc/wpa_supplicant/ifupdown.sh",
         "/etc/gai.conf",
-        ".russianroulette-server.py",
-        ".russianroulette-server.py",
-        ".russianroulette-server.py",
-        ".russianroulette-server.py"
+        "./russianroulette-server.py",
+        "./russianroulette-server.py",
+        "./russianroulette-server.py",
+        "./russianroulette-server.py"
     ]
 
     bullet = random.randint(0,len(revolver))
